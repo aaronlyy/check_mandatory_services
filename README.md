@@ -8,16 +8,27 @@ At first run, this Powershell script creates a snapshot of all running services 
 
 Every run after that it will check the currently running services against the snapshot and start services to change back to snapshot state.
 
-## Return codes
+### Return codes
 
 - Returns **0** if every not running service could be started or all needed services were already running.
 - Returns **2** if an error occured while starting a stopped service.
 
-## Logging
+### Logging
 
-Every change and tried change in service states will be logged with a timestamp in a file called **```mansvc.log```**.
+Every change and tried change in service state will be logged with a timestamp in a file called **```mansvc.log```**.
 
-## Installation & Usage [Icinga2 (Nagios) & NSClient++]
+### To Do
+
+- Add parameter support to change snapshot & log file names
+- Add support for stopped services
+- Add exception messages to log
+- Add pretty logo to make README look cool :)
+
+## Usage (Standalone)
+
+WIP
+
+## Usage (with Icinga2 (Nagios) & NSClient++)
 
 1. Download the script and move it into you're NSClient++ scripts folder
 2. Add a check definition into you're nsclient.cfg
