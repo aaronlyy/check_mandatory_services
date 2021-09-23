@@ -19,7 +19,6 @@ Every change and tried change in service state will be logged with a timestamp i
 
 ### To Do
 
-- Add parameter support to change snapshot & log file names
 - Add support for stopped services
 - Add exception messages to log
 - Add pretty logo to make README look cool :)
