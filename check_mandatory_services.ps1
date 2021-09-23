@@ -71,7 +71,6 @@ Function New-Snapshot {
 #* ----------------------------------------------------------------------------------------------
 #Region Read-Snapshot
 Function Read-Snapshot {
-
     Param(
     [Parameter(Mandatory=$True)]
     [String]$FilePath
@@ -87,8 +86,7 @@ Function Read-Snapshot {
 #* ---------------------------------------------------------------------------------
 #Region Write-Log
 Function Write-Log {
-    Param
-    (
+    Param(
         [Parameter(Mandatory=$True)]
         [String]$Content,
 
