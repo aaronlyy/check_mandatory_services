@@ -45,7 +45,7 @@ Function New-Config {
         [String]$FilePath
     )
     $services = @()
-    $filter = "WdiSystemHost|CDPUserSvc_.+|WpnUserService_.+|PrintWorkflowUserSvc_.+|OneSyncSvc_.+|NPSMSvc_.+|UserDataSvc_.+|UnistoreSvc_.+|UdkUserSvc_.+"
+    $filter = "WdiSystemHost|CDPUserSvc_.+|WpnUserService_.+|PrintWorkflowUserSvc_.+|OneSyncSvc_.+|NPSMSvc_.+|UserDataSvc_.+|UnistoreSvc_.+|UdkUserSvc_.+|PimIndexMaintenanceSvc_.+|cbdhsvc_.+|DevicesFlowUserSvc_."
     Get-Service | Where-Object {$_.Status -Eq "Running" -And $_.Name -Notmatch $filter} | ForEach { $services += $_.Name }
     ConvertTo-Json $services | Out-File -FilePath $FilePath
 }
