@@ -6,11 +6,11 @@ Powershell script to check/change the status of services. For use with Nagios/NS
 
 At first run, this Powershell script creates a snapshot of all running services in form of a .json file.
 
-Every run after that it will check the currently running services against the snapshot and start services to change back to snapshot state.
+Every run after that it will check the currently running services against the snapshot and start services to change back to running.
 
 ### Return codes
 
-- Returns **0** if every not running service could be started or all needed services were already running.
+- Returns **0** if every service from the list could be started or all needed services were already running.
 - Returns **2** if an error occured while starting a stopped service.
 
 ### Logging
