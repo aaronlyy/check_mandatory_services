@@ -135,4 +135,4 @@ else {
 }
 
 Write-Host $message
-return $code
+exit $code
