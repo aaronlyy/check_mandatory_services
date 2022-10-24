@@ -1,4 +1,4 @@
-Function Get-RunningServices {
+function Get-RunningServices {
     # returns an array of all running services that don't match a specific filter
     $filter = @( # array of regex strings 
         "WdiSystemHost",
@@ -20,7 +20,7 @@ Function Get-RunningServices {
     return $services
 }
 
-Function New-Config {
+function New-Config {
     # takes an array an saves it into a json document
     Param(
         [Parameter(Mandatory=$True)][String[]]$Services
@@ -28,13 +28,13 @@ Function New-Config {
     ConvertTo-Json $Services | Out-File -FilePath "$PSScriptRoot/services.json"
 }
 
-Function Read-Config {
+function Read-Config {
     # returns an array of servicenames from a config file
     $services = Get-Content "$PSScriptRoot/services.json" | ConvertFrom-Json # open file and parse json
     return $services
 }
 
-Function Test-Config {
+function Test-Config {
     # checks if a config file exists
     if (Test-Path "$PSScriptRoot/services.json" -PathType leaf) {
         return $True
@@ -44,7 +44,7 @@ Function Test-Config {
     }
 }
 
-Function Write-Log {
+function Write-Log {
     # writes given text into a new line in the logfile
     Param
     (
@@ -54,7 +54,7 @@ Function Write-Log {
     "[$(Get-Date -format "yyyy-MM-dd HH:mm:ss")] $text" | Out-File "$PSScriptRoot/mansvc.log" -Append
 }
 
-Function Test-Service {
+function Test-Service {
     # return true if given service is running else false
     Param(
         [Parameter(Mandatory=$True)][String]$ServiceName
