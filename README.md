@@ -1,6 +1,6 @@
 # check_mandatory_services
 
-Powershell script to check/change the status of services. For use with Nagios/NSClient++.
+Powershell script to check/change the status of services. For use with Icinga/NSClient++.
 
 Show on [Icinga Exchange](https://exchange.icinga.com/aaronlyy/check_mandatory_services).
 
