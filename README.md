@@ -2,6 +2,8 @@
 
 Powershell script to check/change the status of services. For use with Nagios/NSClient++.
 
+Show on Icinga (Plugins)[https://exchange.icinga.com/aaronlyy/check_mandatory_services].
+
 ## What does this script do?
 
 At first run, this Powershell script creates a snapshot of all running services in form of a .json file.
